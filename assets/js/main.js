@@ -1,4 +1,4 @@
-/* Systemised Maths — click-to-enlarge gallery images */
+/* Systemised Maths - click-to-enlarge gallery images */
 (function () {
   'use strict';
 
