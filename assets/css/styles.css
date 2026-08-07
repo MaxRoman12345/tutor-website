@@ -397,6 +397,85 @@ button {
 }
 
 /* =========================================================
+   Reviews
+   ========================================================= */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+.reviews {
+  padding-block: clamp(44px, 6vw, 76px);
+}
+
+.reviews__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px 28px;
+  flex-wrap: wrap;
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2.2vw, 24px);
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(22px, 2.6vw, 30px);
+}
+
+.stars {
+  display: inline-flex;
+  gap: 3px;
+  margin-bottom: 16px;
+}
+.stars .star {
+  width: 21px;
+  height: 21px;
+  display: block;
+}
+
+.review__title {
+  font-size: clamp(16px, 1.6vw, 18px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.review__text {
+  font-size: 14.5px;
+  line-height: 1.62;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+.review__author {
+  margin-top: auto;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--muted);
+}
+.review__author::before {
+  content: "- ";
+}
+
+.reviews__cta {
+  margin-top: clamp(26px, 3.4vw, 38px);
+  text-align: center;
+}
+
+/* =========================================================
    About / tutors
    ========================================================= */
 .section-title {
@@ -891,6 +970,16 @@ html.is-locked body {
 
   .trust {
     align-items: flex-start;
+  }
+  .reviews__head {
+    align-items: flex-start;
+  }
+  .reviews__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .reviews__cta .btn {
+    width: 100%;
+    justify-content: center;
   }
   .site-footer__inner {
     flex-direction: column;

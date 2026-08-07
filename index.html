@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=3">
+<link rel="stylesheet" href="assets/css/styles.css?v=4">
 </head>
 <body>
 
@@ -93,21 +93,74 @@
 
   <!-- ===================== TRUST STRIP ===================== -->
   <div class="shell"><hr class="rule"></div>
-  <section>
-    <div class="shell trust">
-      <div>
-        <h2 class="trust__title">Trusted experience, before the system.</h2>
-        <p class="trust__text">Hear from parents who worked with Roman and Max before our systemised maths approach.</p>
+  <section class="reviews">
+    <div class="shell">
+
+      <div class="reviews__head">
+        <div>
+          <h2 class="trust__title">Trusted experience, before the system.</h2>
+          <p class="trust__text">Hear from parents who worked with Roman and Max before our systemised maths approach.</p>
+        </div>
+        <a class="trustpilot"
+           href="https://www.trustpilot.com/review/systemisedmaths.co.uk"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Read our reviews on Trustpilot (opens in a new tab)">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#00b67a" d="M12 1.6l3.2 6.9 7.3.9-5.4 5 1.4 7.4L12 18.1 5.5 21.8l1.4-7.4-5.4-5 7.3-.9z"/>
+          </svg>
+          <span>Trustpilot</span>
+        </a>
       </div>
-      <a class="trustpilot"
-         href="https://uk.trustpilot.com/review/systemisedmaths.co.uk"
-         target="_blank" rel="noopener noreferrer"
-         aria-label="Read our reviews on Trustpilot (opens in a new tab)">
-        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="#00b67a" d="M12 1.6l3.2 6.9 7.3.9-5.4 5 1.4 7.4L12 18.1 5.5 21.8l1.4-7.4-5.4-5 7.3-.9z"/>
-        </svg>
-        <span>Trustpilot</span>
-      </a>
+
+      <!-- reusable Trustpilot-green star, referenced by each rating below -->
+      <svg width="0" height="0" class="visually-hidden" aria-hidden="true" focusable="false">
+        <defs>
+          <symbol id="tp-star" viewBox="0 0 24 24">
+            <rect width="24" height="24" rx="2.5" fill="#00b67a"/>
+            <path fill="#fff" d="M12 3.9l2.12 4.78 5.2.44-3.95 3.42 1.19 5.08L12 15.35 7.44 17.6l1.19-5.08L4.68 9.1l5.2-.44z"/>
+          </symbol>
+        </defs>
+      </svg>
+
+      <div class="reviews__grid">
+
+        <article class="review">
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">
+            <svg class="star" viewBox="0 0 24 24"><use href="#tp-star"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><use href="#tp-star"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><use href="#tp-star"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><use href="#tp-star"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><use href="#tp-star"/></svg>
+          </div>
+          <h3 class="review__title">Fabulous Tutor</h3>
+          <p class="review__text">Max has been a brilliant tutor for my son. He is kind and patient and more importantly knows his stuff! He is encouraging without being pushy and really inspired my son to work on his own after the sessions. The sessions were always well set out but he would also change things if something had come up at school which needed further explanation. Can't recommend highly enough.</p>
+          <p class="review__author">Emma Baker</p>
+        </article>
+
+        <article class="review">
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">
+            <svg class="star" viewBox="0 0 24 24"><use href="#tp-star"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><use href="#tp-star"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><use href="#tp-star"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><use href="#tp-star"/></svg>
+            <svg class="star" viewBox="0 0 24 24"><use href="#tp-star"/></svg>
+          </div>
+          <h3 class="review__title">Roman is an excellent tutor</h3>
+          <p class="review__text">Roman is an excellent tutor, I’d recommend him highly. He tutored my daughter for her A levels and is very patient, good at explaining first principles and great at setting realistic targets and tracking progress. She found the sessions very useful to get on top of all the key areas and the encouragement to practice and test herself with his guidance was game-changing.</p>
+          <p class="review__author">Catherine Wood</p>
+        </article>
+
+      </div>
+
+      <div class="reviews__cta">
+        <!-- Update the review count here as more reviews come in -->
+        <a class="btn btn--dark"
+           href="https://www.trustpilot.com/review/systemisedmaths.co.uk"
+           target="_blank" rel="noopener noreferrer">
+          View 6+ reviews on Trustpilot <span class="btn__arrow" aria-hidden="true">⇢</span>
+        </a>
+      </div>
+
     </div>
   </section>
   <div class="shell"><hr class="rule"></div>
