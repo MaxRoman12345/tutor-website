@@ -4,8 +4,9 @@
     {
       "name": "site",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "5173"],
-      "port": 5173
+      "runtimeArgs": ["-m", "http.server", "5599"],
+      "port": 5599,
+      "autoPort": false
     }
   ]
 }

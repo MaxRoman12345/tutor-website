@@ -575,7 +575,59 @@ button {
   line-height: 1.6;
   color: var(--muted);
   max-width: 42ch;
+  margin: 0;
+}
+
+.pricing__grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 760px;
   margin-inline: auto;
+  text-align: left;
+}
+@media (min-width: 760px) {
+  .pricing__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+.pricing__card {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pricing__card .pricing__figure {
+  justify-content: flex-start;
+  margin-bottom: 14px;
+}
+
+.pricing__card--free {
+  background: var(--lav);
+  border-color: var(--lav-line);
+}
+.pricing__free-tag {
+  display: inline-block;
+  width: fit-content;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lav-ink);
+  margin-bottom: 12px;
+}
+.pricing__free-text {
+  font-size: 14.5px;
+  line-height: 1.62;
+  color: var(--ink-soft);
+  margin: 0;
 }
 
 /* =========================================================
