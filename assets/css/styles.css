@@ -325,6 +325,23 @@ button {
   color: var(--ink);
   margin-right: 8px;
 }
+.step__tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--lav);
+  color: var(--lav-ink);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.steps--plain .step__title .step__tag {
+  color: var(--lav-ink);
+  margin-right: 0;
+}
 
 /* mini cards nested inside a step */
 .step__cards {
@@ -538,6 +555,25 @@ button {
 /* =========================================================
    Pricing
    ========================================================= */
+/* =========================================================
+   Subjects strip
+   ========================================================= */
+.subjects {
+  padding-block: clamp(26px, 3.5vw, 40px);
+}
+.subjects__text {
+  max-width: 68ch;
+  margin-inline: auto;
+  text-align: center;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.subjects__text strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .pricing {
   text-align: center;
   padding-block: clamp(60px, 8vw, 108px);
@@ -606,6 +642,30 @@ button {
 .pricing__card .pricing__figure {
   justify-content: flex-start;
   margin-bottom: 14px;
+}
+
+/* two price tiers (A-Level / GCSE) stacked in the left column */
+.pricing__tiers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.pricing__level {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.pricing__included {
+  margin-top: 22px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;
 }
 
 .pricing__card--free {
