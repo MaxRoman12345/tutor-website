@@ -3,7 +3,7 @@
    ========================================================= */
 
 :root {
-  --bg: #f7f7f5;
+  --bg: #fefefd;
   --bg-alt: #ffffff;
   --ink: #14140f;
   --ink-soft: #35352f;
@@ -18,6 +18,13 @@
   --dark: #141413;
   --dark-muted: #a3a39d;
   --trust: #00b67a;
+  --navy: #1a2b4c;
+  --navy-bright: #2b4f9e;
+  --navy-tint: #edf1f8;
+  --navy-line: #d9e0ee;
+  --blue: #1f5fd6;
+  --blue-tint: #e8f0fe;
+  --blue-line: #cfdffb;
 
   --font-display:
     "Inter Tight", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -247,6 +254,9 @@ button {
   margin-bottom: 26px;
 }
 
+.hero__title .accent {
+  color: var(--navy-bright);
+}
 .hero__title--wide {
   max-width: 22ch;
 }
@@ -290,7 +300,7 @@ button {
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: var(--lav-ink);
+  color: var(--navy);
   padding-top: 5px;
 }
 
@@ -330,8 +340,8 @@ button {
   margin-left: 6px;
   padding: 2px 9px;
   border-radius: 999px;
-  background: var(--lav);
-  color: var(--lav-ink);
+  background: var(--blue-tint);
+  color: var(--blue);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -339,7 +349,7 @@ button {
   vertical-align: middle;
 }
 .steps--plain .step__title .step__tag {
-  color: var(--lav-ink);
+  color: var(--blue);
   margin-right: 0;
 }
 
@@ -553,6 +563,74 @@ button {
 }
 
 /* =========================================================
+   Our tutors (academic standard)
+   ========================================================= */
+.standards {
+  padding-block: clamp(48px, 6.5vw, 84px);
+}
+.standards__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+.standards .section-title {
+  max-width: 16ch;
+}
+.standards__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 46ch;
+  margin: 18px 0 0;
+}
+.standards__card {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 3vw, 32px);
+}
+.standards__label {
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.standards__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.standards__list li {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-block: 11px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+.standards__list li:first-child {
+  border-top: 0;
+}
+.standards__grade {
+  min-width: 2.2ch;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+.standards__note {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 14px 0 0;
+}
+
+/* =========================================================
    Pricing
    ========================================================= */
 /* =========================================================
@@ -623,12 +701,6 @@ button {
   margin-inline: auto;
   text-align: left;
 }
-@media (min-width: 760px) {
-  .pricing__grid {
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
-  }
-}
 
 .pricing__card {
   background: var(--bg-alt);
@@ -644,11 +716,16 @@ button {
   margin-bottom: 14px;
 }
 
-/* two price tiers (A-Level / GCSE) stacked in the left column */
+/* two price tiers (A-Level / GCSE) side by side, free-lesson card below */
 .pricing__tiers {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+}
+@media (min-width: 760px) {
+  .pricing__tiers {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .pricing__level {
   font-family: var(--font-body);
@@ -669,8 +746,8 @@ button {
 }
 
 .pricing__card--free {
-  background: var(--lav);
-  border-color: var(--lav-line);
+  background: var(--blue-tint);
+  border-color: var(--blue-line);
 }
 .pricing__free-tag {
   display: inline-block;
@@ -680,7 +757,7 @@ button {
   font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--lav-ink);
+  color: var(--blue);
   margin-bottom: 12px;
 }
 .pricing__free-text {
@@ -1056,7 +1133,8 @@ html.is-locked body {
     max-width: 56ch;
   }
 
-  .tutors {
+  .tutors,
+  .standards__grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 36px;
   }
